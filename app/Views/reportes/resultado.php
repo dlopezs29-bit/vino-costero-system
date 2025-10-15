@@ -23,7 +23,7 @@
 
     <canvas id="grafico"></canvas>
 
-    <table class="table table-bordered mt-3">
+    <table class="table table-bordered table-dark table-striped">
         <thead>
             <tr>
                 <th>Tipo de Uva</th>
