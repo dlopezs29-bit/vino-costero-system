@@ -1,0 +1,19 @@
+body {
+    background-color: #DBCDC9;
+    margin: 3%;
+}
+
+h1{
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    font-family: cursive;
+}
+
+form {
+    font-family: cursive;
+}

@@ -1,0 +1,43 @@
+body {
+  background-color: #DBCDC9;
+}
+
+.dashboard {
+  padding: 40px 0;
+}
+.card {
+  border: none;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  background-color: #795950;
+  color:  #E3DAC9;
+}
+.navbar {
+  background-color: #795950;
+  font-family:cursive;
+}
+.navbar-brand,
+.nav-link {
+  color:  #E3DAC9 !important;
+}
+.logout {
+  color:  #E3DAC9;
+  text-decoration: none;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+}
+
+.row {
+  font-family: cursive;
+}
+
+h2 {
+  font-family: cursive;
+  color:  #E3DAC9;
+}
