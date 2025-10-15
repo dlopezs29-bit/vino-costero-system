@@ -17,6 +17,7 @@
 
 <body>
     <h1>Generar Reporte de Cosechas</h1>
+    <a href="<?= base_url('dashboard') ?>" class="btn btn-secondary mb-3"><i class="bi bi-arrow-bar-left fs-5"></i> Volver al Dashboard</a>
 
     <form action="<?= base_url('reportes/generar') ?>" method="post" class="mb-4">
         <div class="row">

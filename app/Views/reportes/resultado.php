@@ -19,6 +19,7 @@
     <h3>Reporte de Cosechas del <?= esc($fechaInicio) ?> al <?= esc($fechaFin) ?></h3>
 
     <a href="<?= base_url("reportes/pdf/$fechaInicio/$fechaFin") ?>" class="btn btn-danger mb-3">Descargar PDF</a>
+    <a href="<?= base_url('dashboard') ?>" class="btn btn-secondary mb-3"><i class="bi bi-arrow-bar-left fs-5"></i> Volver al Dashboard</a>
 
     <canvas id="grafico"></canvas>
 
