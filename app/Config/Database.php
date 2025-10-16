@@ -26,10 +26,10 @@ class Database extends Config
      */
     public array $default = [
         'DSN'          => '',
-        'hostname'     => 'localhost',
+        'hostname'     => 'switchback.proxy.rlwy.net',
         'username'     => 'root',
-        'password'     => '',
-        'database'     => 'vinoCostero',
+        'password'     => 'qKuCfNPjHBbjYqSZPmxamoLbEEInIvJc',
+        'database'     => 'railway',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,
@@ -41,7 +41,7 @@ class Database extends Config
         'compress'     => false,
         'strictOn'     => false,
         'failover'     => [],
-        'port'         => 3306,
+        'port'         => 55961,
         'numberNative' => false,
         'foundRows'    => false,
         'dateFormat'   => [
