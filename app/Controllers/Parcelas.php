@@ -15,14 +15,28 @@ class Parcelas extends BaseController
 
     public function crear()
     {
+        // Muestra la vista con un posible mensaje de error
         return view('parcelas/crear');
     }
 
     public function guardar()
     {
         $model = new ParcelaModel();
+        $nombre = $this->request->getPost('nombre');
+
+        // Verificar si el nombre ya existe
+        $existe = $model->where('nombre', $nombre)->first();
+
+        if ($existe) {
+            // Si el nombre ya existe, vuelve a la vista con un mensaje de error
+            return view('parcelas/crear', [
+                'error' => 'El nombre de la parcela ya está registrado. Por favor, elige otro.'
+            ]);
+        }
+
+        // Si no existe, se guarda normalmente
         $model->insert([
-            'nombre' => $this->request->getPost('nombre'),
+            'nombre' => $nombre,
             'ubicacion' => $this->request->getPost('ubicacion'),
             'area' => $this->request->getPost('area'),
             'id_uva' => $this->request->getPost('id_uva'),

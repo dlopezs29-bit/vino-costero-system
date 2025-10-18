@@ -22,12 +22,26 @@ class UvaController extends Controller
     public function store()
     {
         $model = new UvaModel();
-
-        // Validación básica
         $validation = \Config\Services::validation();
+
         $validation->setRules([
-            'nombre' => 'required|min_length[3]|max_length[100]',
-            'descripcion' => 'permit_empty|max_length[500]'
+            'nombre' => [
+                'label' => 'Nombre',
+                'rules' => 'required|min_length[3]|max_length[100]|is_unique[tipos_uva.nombre]',
+                'errors' => [
+                    'required' => 'El campo {field} es obligatorio.',
+                    'min_length' => 'El {field} debe tener al menos 3 caracteres.',
+                    'max_length' => 'El {field} no puede tener más de 100 caracteres.',
+                    'is_unique' => 'El nombre de la uva ya está registrado. Elija otro.'
+                ]
+            ],
+            'descripcion' => [
+                'label' => 'Descripción',
+                'rules' => 'permit_empty|max_length[500]',
+                'errors' => [
+                    'max_length' => 'La {field} no puede tener más de 500 caracteres.'
+                ]
+            ]
         ]);
 
         if (!$validation->withRequest($this->request)->run()) {

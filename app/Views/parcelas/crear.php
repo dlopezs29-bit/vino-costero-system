@@ -11,6 +11,9 @@
 <body class="p-4">
     <h1>Registrar Nueva Parcela</h1>
     <div class="container">
+        <?php if (isset($error)): ?>
+            <div class="alert alert-danger"><?= esc($error) ?></div>
+        <?php endif; ?>
     <form action="<?= base_url('parcelas/guardar') ?>" method="post">
         <div class="mb-3">
             <label>Nombre</label>
